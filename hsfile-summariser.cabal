@@ -69,12 +69,20 @@ executable hsfile-summariser
 
     -- Other library packages from which modules are imported.
     build-depends:
-      base ^>=4.20.0.0,
-      filepath,
-      directory,
+      base >=4.21.0.0,
       containers,
+      directory,
+      filepath,
+      ghc-exactprint ^>= 1.11,
+--      ghc-lib-parser == 9.10.*,
+--      ghc-lib == 9.10.*,
+--      ghc-lib-parser-ex  >= 9.10,
+      ghc-paths,
+      ghc == 9.12.2,
+      uniplate,
       mtl,
-      haskell-src-exts    >=1.23  
+      process,
+      syb
 
     -- Directories containing source files.
     hs-source-dirs:   app
